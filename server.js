@@ -14,4 +14,8 @@ app.use(express.json())
 const plantsRouter = require('./routes/plants')
 app.use('/plants', plantsRouter)
 
+const measurementsRouter = require("./routes/measurements")
+app.use('/measurements', measurementsRouter)
+
+
 app.listen(3000, () => console.log('Server Started'))
