@@ -13,7 +13,8 @@ const measurementSchema = new mongoose.Schema( {
         type: String
     },
     date_time: {
-        type: Date
+        type: Date,
+        required: true
     },
     Identify_measureID: {
         type: Boolean

@@ -29,7 +29,7 @@ router.get('/:id', getMeasurement, async (req, res) => {
 
 // Creating one
 router.post('/', async (req, res) => {
-    const Measurement = new Measurement({
+    const measurement = new Measurement({
         name: req.body.name,
         MeasurementId: req.body.MeasurementId,
         MeasurementHumidity: req.body.MeasurementHumidity,
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
         drySoil: req.body.drySoil
     })
     try {
-        const newMeasurement = await Measurement.save()
+        const newMeasurement = await measurement.save()
         res.status(201).json(newMeasurement)
     } catch (err) {
         res.status(400).json({ message: err.message })
