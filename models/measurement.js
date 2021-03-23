@@ -13,16 +13,17 @@ const measurementSchema = new mongoose.Schema( {
             type: Number,
             required: true
         },
-        temperature: {
+        drySoil: {
+            type: String,
+            required: true
+        },
+        tempWarning: {
             type: String
         },
         date_time: {
             type: Date,
             required: true
         },
-        Identify_measureID: {
-            type: Boolean
-        }
 })
 
 

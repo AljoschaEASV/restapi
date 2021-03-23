@@ -30,11 +30,13 @@ router.get('/:id', getMeasurement, async (req, res) => {
 // Creating one
 router.post('/', async (req, res) => {
     const measurement = new Measurement({
-        name: req.body.name,
+        plantId: req.plantId.name,
         MeasurementId: req.body.MeasurementId,
+        airHumidity: reg.body.airHumidity,
         MeasurementHumidity: req.body.MeasurementHumidity,
         tempWarning: req.body.tempWarning,
-        drySoil: req.body.drySoil
+        drySoil: req.body.drySoil,
+        dateTime: reg.body.dateTime
     })
     try {
         const newMeasurement = await measurement.save()
@@ -84,5 +86,5 @@ async function getMeasurement(req, res, next) {
     res.Measurement = Measurement
     next()
 }
-
+    
 module.exports = router
