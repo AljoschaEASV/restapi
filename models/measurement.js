@@ -1,16 +1,18 @@
 const mongoose = require('mongoose')
 
 const measurementSchema = new mongoose.Schema( {
-        plantId:{
+        plantID:{
             type: String,
             required: true
         },
+        /*
         measureId: {
             type: String,
             required: true
         },
+        */
         airHumidity: {
-            type: Number,
+            type: String,
             required: true
         },
         drySoil: {
@@ -20,8 +22,8 @@ const measurementSchema = new mongoose.Schema( {
         tempWarning: {
             type: String
         },
-        date_time: {
-            type: Date,
+        dateTime: {
+            type: String,
             required: true
         },
 })

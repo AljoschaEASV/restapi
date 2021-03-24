@@ -21,7 +21,7 @@ router.get('/:id', getPlant, (req, res) => {
 router.post('/', async (req, res) => {
   const plant = new Plant({
     name: req.body.name,
-    plantId: req.body.plantId,
+    plantID: req.body.plantID,
     plantHumidity: req.body.plantHumidity,
     tempWarning: req.body.tempWarning,
     drySoil: req.body.drySoil

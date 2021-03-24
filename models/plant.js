@@ -4,7 +4,7 @@ const plantsSchema = new mongoose.Schema({
   name: {
     type: String,
   },
-  plantId: {
+  plantID: {
     type: String,
   },
   plantHumidity: {
