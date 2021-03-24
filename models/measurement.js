@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-
+const multer = require('multer')
+var base64 = require('base-64')
 const measurementSchema = new mongoose.Schema( {
         plantID:{
             type: String,
@@ -11,6 +12,12 @@ const measurementSchema = new mongoose.Schema( {
             required: true
         },
         */
+       temperature: {
+        type: String,
+        required: true
+    },
+
+
         airHumidity: {
             type: String,
             required: true
@@ -26,6 +33,7 @@ const measurementSchema = new mongoose.Schema( {
             type: String,
             required: true
         },
+       
 })
 
 

@@ -32,10 +32,12 @@ router.post('/', async (req, res) => {
     const measurement = new Measurement({
         plantID: req.body.plantID,
         //MeasurementId: req.body.MeasurementId,
+        temperature: req.body.temperature,
         airHumidity: req.body.airHumidity,
         tempWarning: req.body.tempWarning,
         drySoil: req.body.drySoil,
-        dateTime: req.body.dateTime
+        dateTime: req.body.dateTime,
+        
     })
     try {
         const newMeasurement = await measurement.save()
