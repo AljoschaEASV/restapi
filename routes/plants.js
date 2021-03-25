@@ -20,11 +20,13 @@ router.get('/:id', getPlant, (req, res) => {
 // Creating one
 router.post('/', async (req, res) => {
   const plant = new Plant({
-    name: req.body.name,
     plantID: req.body.plantID,
-    plantHumidity: req.body.plantHumidity,
+    //MeasurementId: req.body.MeasurementId,
+    temperature: req.body.temperature,
+    airHumidity: req.body.airHumidity,
     tempWarning: req.body.tempWarning,
-    drySoil: req.body.drySoil
+    drySoil: req.body.drySoil,
+    dateTime: req.body.dateTime,
   })
   try {
     const newPlant = await plant.save()
